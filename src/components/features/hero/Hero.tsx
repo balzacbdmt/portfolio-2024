@@ -1,6 +1,6 @@
 import styles from "./Hero.module.scss";
 import Avatar from "../../../assets/avatar.png";
-import ScrollIcon from "../../shared/ScrollIcon/ScrollIcon";
+import ScrollIcon from "../../shared/scrollIcon/ScrollIcon";
 
 const Hero = () => {
   return (
