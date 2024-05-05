@@ -13,6 +13,10 @@ const Hero = () => {
         </h2>
       </div>
       <img className={styles.avatar} src={Avatar} alt="" />
+      <div className={styles.CTAScrollDown}>
+        <p>Scroll down to sail into my journey</p>
+        <ScrollIcon />
+      </div>
     </section>
   );
 };

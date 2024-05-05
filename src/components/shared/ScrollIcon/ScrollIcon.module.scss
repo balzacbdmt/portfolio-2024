@@ -1,0 +1,33 @@
+@import "../../../constants/styles/global.module.scss";
+
+.scrollIcon {
+  position: relative;
+  width: 18px;
+  height: 36px;
+  border: 1px solid $blue_light;
+  border-radius: 12px;
+
+  .dot {
+    width: 14px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    aspect-ratio: 1/1;
+    background-color: $blue_light;
+    border-radius: 100%;
+    animation: bounce 2s infinite;
+  }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      top: 20px;
+    }
+    40% {
+      top: 2px;
+    }
+    60% {
+      top: 14px;
+    }
+  }
