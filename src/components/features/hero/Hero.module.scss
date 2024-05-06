@@ -12,16 +12,19 @@
     h1 {
       font-size: 64px;
       margin: 0;
+      @include appear-from-bottom;
     }
 
     h2 {
       margin: 0;
       color: $blue_light;
+      @include appear-from-bottom;
     }
   }
 
   .avatar {
     width: 400px;
+    @include appear-from-bottom;
   }
 
   .CTAScrollDown {
@@ -32,10 +35,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include delayed-appear;
 
     p {
-        font-size: 18px;
-        font-weight: 600;
+      font-size: 18px;
+      font-weight: 600;
     }
   }
 }
