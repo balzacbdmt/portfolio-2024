@@ -9,7 +9,8 @@ const Hero = () => {
         <h1>Hi, my name is Balzac.</h1>
         <h2>
           I&apos;m a front-end developer based in Paris who loves
-          <br />creating beautiful user interfaces.
+          <br />
+          creating beautiful user interfaces.
         </h2>
       </div>
       <img className={styles.avatar} src={Avatar} alt="" />
