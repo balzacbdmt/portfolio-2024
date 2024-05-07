@@ -2,7 +2,6 @@
 
 .hero {
   position: relative;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,13 +9,10 @@
 
   .title {
     h1 {
-      font-size: 64px;
-      margin: 0;
       @include appear-from-bottom;
     }
 
     h2 {
-      margin: 0;
       color: $blue_light;
       @include appear-from-bottom;
     }
