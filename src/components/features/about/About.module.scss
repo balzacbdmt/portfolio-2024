@@ -1,7 +1,67 @@
 @import "../../../constants/styles/global.module.scss";
 
 .about {
-    background-color: $blue_light;
-    padding: 4rem;
-    height: calc(100vh - 8rem);
+  position: relative;
+  background-color: $blue_light;
+  padding: 4rem;
+  height: calc(100vh - 8rem);
+
+  > h1 {
+    color: $white;
+  }
+
+  > .content {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    padding-top: 4rem;
+    padding-right: 4rem;
+    height: calc(100vh - 4rem);
+    padding-left: calc(50vw - 4rem);
+    overflow-y: auto;
+
+    > .row {
+      display: grid;
+      grid-template-columns: 25% 1fr;
+      gap: 24px;
+      color: $white;
+      border-radius: 10px;
+      padding: 24px;
+
+      &:hover {
+        background-color: darken($blue_light, 10%);
+      }
+
+      > .date {
+        margin: 0;
+        line-height: 34px;
+        text-align: right;
+        @extend .uppercase;
+        color: $blue;
+      }
+
+      h2 {
+        line-height: 34px;
+        // color: $blue;
+      }
+
+      p {
+        margin: 12px 0;
+      }
+
+      .pillContainer {
+        display: flex;
+        gap: 6px;
+
+        .pill {
+            background-color: $yellow;
+            padding: 4px 12px;
+            border-radius: 20px;
+            color: $white;
+            font-weight: bold;
+        }
+      }
+    }
+  }
 }

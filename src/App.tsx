@@ -40,7 +40,8 @@ const App = () => {
   
   useEffect(() => {
     if (appRef.current) {
-      appRef.current.addEventListener('wheel', handleScroll, { passive: false });
+      // TODO repair it
+      // appRef.current.addEventListener('wheel', handleScroll, { passive: false });
     }
   }, []);
 
