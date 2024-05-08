@@ -1,10 +1,11 @@
+import { forwardRef } from "react";
 import styles from "./Hero.module.scss";
 import Avatar from "../../../assets/avatar.png";
 import ScrollIcon from "../../shared/scrollIcon/ScrollIcon";
 
-const Hero = () => {
+const Hero = forwardRef<HTMLElement>((_props, ref) => {
   return (
-    <section className={styles.hero}>
+    <section ref={ref} className={styles.hero}>
       <div className={styles.title}>
         <h1>Hi, my name is Balzac.</h1>
         <h2>
@@ -20,6 +21,8 @@ const Hero = () => {
       </div>
     </section>
   );
-};
+});
+
+Hero.displayName = "Hero";
 
 export default Hero;

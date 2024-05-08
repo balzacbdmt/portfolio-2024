@@ -1,0 +1,7 @@
+@import "../../../constants/styles/global.module.scss";
+
+.about {
+    background-color: $blue_light;
+    padding: 4rem;
+    height: calc(100vh - 8rem);
+}
