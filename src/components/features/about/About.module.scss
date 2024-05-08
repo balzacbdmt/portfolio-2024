@@ -6,7 +6,7 @@
   padding: 4rem;
   height: calc(100vh - 8rem);
 
-  > h1 {
+  > h1, h2 {
     color: $white;
   }
 
@@ -15,9 +15,9 @@
     right: 0;
     left: 0;
     top: 0;
-    padding-top: 4rem;
+    padding-top: 5.2rem; // TODO clean way to do that
     padding-right: 4rem;
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 5.2em);
     padding-left: calc(50vw - 4rem);
     overflow-y: auto;
 
@@ -62,6 +62,19 @@
             font-weight: bold;
         }
       }
+    }
+  }
+
+  >.bottomLeftContainer {
+    position: absolute;
+    left: 4rem;
+    bottom: 4rem;
+
+    > a {
+        cursor: pointer;
+        @extend .uppercase;
+        color: $white;
+        font-weight: bold;
     }
   }
 }
