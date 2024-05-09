@@ -3,23 +3,42 @@
 .about {
   position: relative;
   background-color: $blue_light;
-  padding: 4rem;
-  height: calc(100vh - 8rem);
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4rem;
 
-  > h1, h2 {
+  > .leftColumn {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-self: flex-start;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100vh - 8rem);
     color: $white;
+
+    > h1 > span {
+      color: $yellow;
+    }
+
+    > .socials > a {
+      cursor: pointer;
+      @extend .uppercase;
+      font-weight: bold;
+    }
   }
 
   > .content {
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: 0;
-    padding-top: 5.2rem; // TODO clean way to do that
-    padding-right: 4rem;
-    height: calc(100vh - 5.2em);
-    padding-left: calc(50vw - 4rem);
-    overflow-y: auto;
+    padding: 4rem 0;
+
+    > h2 {
+      color: $white;
+      line-height: 108px;
+    }
 
     > .row {
       display: grid;
@@ -35,7 +54,9 @@
 
       > .date {
         margin: 0;
-        line-height: 28px;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 30px;
         text-align: right;
         @extend .uppercase;
         color: $blue;
@@ -43,7 +64,6 @@
 
       h2 {
         line-height: 34px;
-        // color: $blue;
       }
 
       p {
@@ -55,26 +75,13 @@
         gap: 6px;
 
         .pill {
-            background-color: $yellow;
-            padding: 4px 12px;
-            border-radius: 20px;
-            color: $white;
-            font-weight: bold;
+          background-color: $yellow;
+          padding: 4px 12px;
+          border-radius: 20px;
+          color: $white;
+          font-weight: bold;
         }
       }
-    }
-  }
-
-  >.bottomLeftContainer {
-    position: absolute;
-    left: 4rem;
-    bottom: 4rem;
-
-    > a {
-        cursor: pointer;
-        @extend .uppercase;
-        color: $white;
-        font-weight: bold;
     }
   }
 }
