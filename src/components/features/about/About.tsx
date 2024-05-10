@@ -1,11 +1,18 @@
 import { forwardRef } from "react";
 import styles from "./About.module.scss";
+import Row from "./row/Row";
+import { experiences } from "../../../constants/data";
 
 const About = forwardRef<HTMLElement>((_props, ref) => {
+
+  const rowRender = experiences.map((experience) => <Row key={experience.company} experience={experience} />);
+
   return (
     <section ref={ref} className={styles.about}>
       <div className={styles.leftColumn}>
-        <h1>About&nbsp;<span>me</span></h1>
+        <h1>
+          About&nbsp;<span>me</span>
+        </h1>
         <div className={styles.socials}>
           <a>Get my resume</a>
           {/* Github icon */}
@@ -16,62 +23,7 @@ const About = forwardRef<HTMLElement>((_props, ref) => {
       </div>
       <div className={styles.content}>
         <h2>Relevant experiences</h2>
-        {/* TODO Should be a component that import data from a JSON */}
-        <div className={styles.row}>
-          <p className={styles.date}>Jan 2024 - present</p>
-          <div>
-            <h3>Frontend Engineer • Hopserve</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque feugiat id purus vel tempor. Nullam euismod tellus
-              non magna fermentum placerat. Mauris tellus erat, tempor a
-              fermentum nec, malesuada at ante. Fusce dapibus sollicitudin mi,
-              eu dapibus risus porta non.
-            </p>
-            {/* TODO: Shoud be a shared component */}
-            <div className={styles.pillContainer}>
-              <p className={styles.pill}>Nuxt</p>
-              <p className={styles.pill}>Typescript</p>
-              <p className={styles.pill}>D3</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.row}>
-          <p className={styles.date}>Jan 2024 - present</p>
-          <div>
-            <h3>Frontend Engineer • Hopserve</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque feugiat id purus vel tempor. Nullam euismod tellus
-              non magna fermentum placerat. Mauris tellus erat, tempor a
-              fermentum nec, malesuada at ante. Fusce dapibus sollicitudin mi,
-              eu dapibus risus porta non.
-            </p>
-            <div className={styles.pillContainer}>
-              <p className={styles.pill}>Nuxt</p>
-              <p className={styles.pill}>Typescript</p>
-              <p className={styles.pill}>D3</p>
-            </div>
-          </div>
-        </div>
-        <div className={styles.row}>
-          <p className={styles.date}>Jan 2024 - present</p>
-          <div>
-            <h3>Frontend Engineer • Hopserve</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque feugiat id purus vel tempor. Nullam euismod tellus
-              non magna fermentum placerat. Mauris tellus erat, tempor a
-              fermentum nec, malesuada at ante. Fusce dapibus sollicitudin mi,
-              eu dapibus risus porta non.
-            </p>
-            <div className={styles.pillContainer}>
-              <p className={styles.pill}>Nuxt</p>
-              <p className={styles.pill}>Typescript</p>
-              <p className={styles.pill}>D3</p>
-            </div>
-          </div>
-        </div>
+        {rowRender}
       </div>
     </section>
   );
