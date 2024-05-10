@@ -14,4 +14,5 @@ export type Experience = {
   company: string;
   description: string;
   skills: Skill[];
+//   TODO: add URL to website
 };
