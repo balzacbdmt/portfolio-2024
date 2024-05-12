@@ -12,7 +12,7 @@ export type Experience = {
   date: string;
   title: string;
   company: string;
-  description: string;
+  tasks: string[];
   skills: Skill[];
-//   TODO: add URL to website
+  url: string;
 };

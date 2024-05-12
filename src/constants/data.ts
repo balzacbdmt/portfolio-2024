@@ -1,31 +1,45 @@
 import { Experience } from "./types";
 
 export const experiences: Experience[] = [
-    {
-      id: 1,
-      date: "Jan 2024 - present",
-      title: "Frontend Engineer",
-      company: "Hopserve",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat id purus vel tempor. Nullam euismod tellus non magna fermentum placerat. Mauris tellus erat, tempor a fermentum nec, malesuada at ante. Fusce dapibus sollicitudin mi, eu dapibus risus porta non.",
-      skills: ["nuxt", "typescript", "d3"],
-    },
-    {
-      id: 2,
-      date: "Mar 2021 - Dec 2023",
-      title: "Frontend Engineer",
-      company: "Dreem",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat id purus vel tempor. Nullam euismod tellus non magna fermentum placerat. Mauris tellus erat, tempor a fermentum nec, malesuada at ante. Fusce dapibus sollicitudin mi, eu dapibus risus porta non.",
-      skills: [],
-    },
-    {
-      id: 3,
-      date: "Sep 2019 - Feb 2021",
-      title: "Fullstack Developer",
-      company: "Défipix by Sismik",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat id purus vel tempor. Nullam euismod tellus non magna fermentum placerat. Mauris tellus erat, tempor a fermentum nec, malesuada at ante. Fusce dapibus sollicitudin mi, eu dapibus risus porta non.",
-      skills: [],
-    },
+  {
+    id: 1,
+    date: "Jan 2024 - May 2024",
+    title: "Frontend Engineer",
+    company: "Hopserve",
+    tasks: [
+      "Created a CSPM, a tool to analyze and make sure AWS or Azure infrastructures are secure and check their compliance for frameworks like HIPAA, PCI DSS, etc.",
+      "Created an SDK tool to review front-end PR's through pinned comments and screenshots.",
+    ],
+    skills: ["nuxt", "typescript", "d3"],
+    url: "https://hopserve.io/",
+  },
+  {
+    id: 2,
+    date: "Mar 2021 - Dec 2023",
+    title: "Frontend Engineer",
+    company: "Dreem",
+    tasks: [
+      "Maintained and upgraded an internal tool used to list and display Dreem headband signals (EEG and accelerometer) to sell to researchers and pharma groups.",
+      "Created and led an enrollment (as sales tunnel) for Dreem's digital Sleep Clinic (DreemHealth): series of questions about patient sleep, presentation of the clinic, appointment and complementary questions",
+      "Created a back-office to get all patients data from enrollment and also from Sleep Plan, the mobile app for patients in the clinic",
+      "Created a series of satisfaction surveys for patients of the sleep clinic.",
+      "Created corporate websites dreem.com 🪦 and dreemhealth.com",
+      "Led all front-end projects and ensured a technical referent role for a junior front-end developer",
+    ],
+    skills: ["react", "typescript", "d3"],
+    url: "https://dreemhealth.com/",
+  },
+  {
+    id: 3,
+    date: "Sep 2019 - Feb 2021",
+    title: "Fullstack Developer",
+    company: "Défipix by Sismik",
+    tasks: [
+      "Created a flow to rent a photobooth taking into account all technical constraints: Booth type, delivery, options, installation, payment, invoice, etc.",
+      "Created a dashboard to follow rentals with basic CRUD operations.",
+      "Created payment links",
+    ],
+    skills: ["react", "vue", "node", "javascript"],
+    url: "https://defipix.fr/",
+  },
 ];

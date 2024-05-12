@@ -5,6 +5,14 @@ $blue: #202a34;
 $blue_light: #4b819f;
 $gray_light: #eef2f5;
 
+.white {
+  color: $white;
+}
+
+.yellow {
+  color: $yellow;
+}
+
 :export {
   white: $white;
   black: $black;
