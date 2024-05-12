@@ -1,16 +1,15 @@
-import { forwardRef } from "react";
 import styles from "./About.module.scss";
 import Row from "./row/Row";
 import { Icon } from "@iconify/react";
 import { experiences } from "../../../constants/data";
 
-const About = forwardRef<HTMLElement>((_props, ref) => {
+const About = () => {
   const rowRender = experiences.map((experience) => (
     <Row key={experience.company} experience={experience} />
   ));
 
   return (
-    <section ref={ref} className={styles.about}>
+    <section className={styles.about}>
       <div className={styles.leftColumn}>
         <h1>
           About&nbsp;<span>me</span>
@@ -57,8 +56,6 @@ const About = forwardRef<HTMLElement>((_props, ref) => {
       </div>
     </section>
   );
-});
-
-About.displayName = "About";
+};
 
 export default About;
