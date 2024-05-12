@@ -1,0 +1,11 @@
+@import "../../../constants/styles/global.module.scss";
+
+.dot {
+    z-index: 999;
+    width: 14px;
+    height: 14px;
+    background: $gray_light;
+    border-radius: 100%;
+    position: absolute;
+    pointer-events: none;
+}
