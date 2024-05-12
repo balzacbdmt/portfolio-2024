@@ -25,10 +25,24 @@
       color: $yellow;
     }
 
-    > .socials > a {
-      cursor: pointer;
-      @extend .uppercase;
-      font-weight: bold;
+    > .socials {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      a {
+        cursor: pointer;
+        @extend .uppercase;
+        font-weight: bold;
+        text-decoration: none;
+        color: $white;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 12px;
+      }
+
     }
   }
 
