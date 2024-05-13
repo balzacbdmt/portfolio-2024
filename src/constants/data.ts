@@ -20,11 +20,11 @@ export const experiences: Experience[] = [
     company: "Dreem",
     tasks: [
       "Maintained and upgraded an internal tool used to list and display Dreem headband signals (EEG and accelerometer) to sell to researchers and pharma groups.",
-      "Created and led an enrollment (as sales tunnel) for Dreem's digital Sleep Clinic (DreemHealth): series of questions about patient sleep, presentation of the clinic, appointment and complementary questions",
-      "Created a back-office to get all patients data from enrollment and also from Sleep Plan, the mobile app for patients in the clinic",
+      "Created and led an enrollment (as sales tunnel) for Dreem's digital Sleep Clinic (DreemHealth): series of questions about patient sleep, presentation of the clinic, appointment and complementary questions.",
+      "Created a back-office to get all patients data from enrollment and also from Sleep Plan, the mobile app for patients in the clinic.",
       "Created a series of satisfaction surveys for patients of the sleep clinic.",
       "Created corporate websites dreem.com 🪦 and dreemhealth.com",
-      "Led all front-end projects and ensured a technical referent role for a junior front-end developer",
+      "Led all front-end projects and ensured a technical referent role for a junior front-end developer.",
     ],
     skills: ["react", "typescript", "d3"],
     url: "https://dreemhealth.com/",
@@ -37,7 +37,7 @@ export const experiences: Experience[] = [
     tasks: [
       "Created a flow to rent a photobooth taking into account all technical constraints: Booth type, delivery, options, installation, payment, invoice, etc.",
       "Created a dashboard to follow rentals with basic CRUD operations.",
-      "Created payment links",
+      "Created payment links.",
     ],
     skills: ["react", "vue", "node", "javascript"],
     url: "https://defipix.fr/",
