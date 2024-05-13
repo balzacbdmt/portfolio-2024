@@ -8,4 +8,8 @@
     border-radius: 100%;
     position: absolute;
     pointer-events: none;
+
+    @include respond-to('small') {
+      display: none;
+    }
 }

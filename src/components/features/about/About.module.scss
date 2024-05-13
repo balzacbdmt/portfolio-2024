@@ -8,6 +8,22 @@
   justify-content: space-between;
   padding: 0 4rem;
 
+  @include respond-to("medium") {
+    flex-direction: column-reverse;
+    padding: 0 24px;
+  }
+
+  >.mobileTitle {
+    display: none;
+    padding-top: 24px;
+    color: $white;
+
+    @include respond-to("medium") {
+      display: block;
+    }
+    
+  }
+
   > .leftColumn {
     position: sticky;
     top: 0;
@@ -21,8 +37,15 @@
     height: calc(100vh - 8rem);
     color: $white;
 
-    > h1 > span {
-      color: $yellow;
+    @include respond-to("medium") {
+      position: unset;
+      height: unset;
+      padding-top: 2rem;
+      padding-left: 24px;
+
+      >h1 {
+        display: none;
+      }
     }
 
     > .socials {
@@ -42,16 +65,23 @@
         display: flex;
         gap: 12px;
       }
-
     }
   }
 
   > .content {
     padding: 4rem 0;
 
+    @include respond-to("medium") {
+      padding: unset;
+    }
+
     > h2 {
       color: $white;
       line-height: 108px;
+
+      @include respond-to("medium") {
+        line-height: unset;
+      }
     }
   }
 }

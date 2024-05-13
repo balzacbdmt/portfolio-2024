@@ -1,3 +1,5 @@
+@import './mixins.module.scss';
+
 h1,
 h2,
 h3 {
@@ -6,10 +8,26 @@ h3 {
 
 h1 {
   font-size: 64px;
+
+  @include respond-to("medium") {
+    font-size: 48px;
+  }
+
+  @include respond-to("small") {
+    font-size: 36px;
+  }
 }
 
 h2 {
   font-size: 48px;
+
+  @include respond-to("medium") {
+    font-size: 36px;
+  }
+
+  @include respond-to("small") {
+    font-size: 24px;
+  }
 }
 
 .uppercase {

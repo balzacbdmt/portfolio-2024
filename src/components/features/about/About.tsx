@@ -12,7 +12,7 @@ const About = () => {
     <section className={styles.about}>
       <div className={styles.leftColumn}>
         <h1>
-          About&nbsp;<span>me</span>
+          About&nbsp;<span className={styles.yellow}>me</span>
         </h1>
         <div className={styles.socials}>
           <a href="/CV_Balzac_Baudemont_2024.pdf" target="_blank">
@@ -54,6 +54,9 @@ const About = () => {
         <h2>Relevant experiences</h2>
         {rowRender}
       </div>
+      <h1 className={styles.mobileTitle}>
+        About&nbsp;<span className={styles.yellow}>me</span>
+      </h1>
     </section>
   );
 };

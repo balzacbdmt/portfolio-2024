@@ -9,6 +9,11 @@
   padding: 24px;
   text-decoration: none;
 
+  @include respond-to("small") {
+    grid-template-columns: unset;
+    gap: 6px;
+  }
+
   &:hover {
     background-color: darken($blue_light, 10%);
   }
@@ -21,6 +26,10 @@
     text-align: right;
     @extend .uppercase;
     color: $blue;
+
+    @include respond-to("small") {
+      text-align: left;
+    }
   }
 
   .title {

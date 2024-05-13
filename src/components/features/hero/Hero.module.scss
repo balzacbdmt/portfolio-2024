@@ -6,6 +6,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 4rem;
+  max-width: 1200px;
+  margin: auto;
+
+  @include respond-to("small") {
+    padding: 0 24px;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
 
   .title {
     h1 {
@@ -16,12 +24,24 @@
       color: $blue_light;
       width: 80%;
       @include appear-from-bottom;
+
+      @include respond-to("small") {
+        width: unset;
+      }
     }
   }
 
   .avatar {
     width: 400px;
     @include appear-from-bottom;
+
+    @include respond-to("medium") {
+      width: 200px;
+    }
+
+    @include respond-to("small") {
+      width: 80%;
+    }
   }
 
   .CTAScrollDown {
@@ -33,6 +53,10 @@
     flex-direction: column;
     align-items: center;
     @include delayed-appear;
+
+    @include respond-to('small') {
+     text-align: center;
+    }
 
     p {
       font-size: 18px;
