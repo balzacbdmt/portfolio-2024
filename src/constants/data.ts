@@ -1,4 +1,4 @@
-import { Experience } from "./types";
+import { Experience, Project } from "./types";
 
 export const experiences: Experience[] = [
   {
@@ -41,5 +41,23 @@ export const experiences: Experience[] = [
     ],
     skills: ["react", "vue", "node", "javascript"],
     url: "https://defipix.fr/",
+  },
+];
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    date: "May 23",
+    title: "React component notification",
+    description: "Created a simple notification package to get comfortable with using npm.",
+    skills: ["npm", "react", "typescript"],
+    url: "https://www.npmjs.com/package/react-component-notification",
+  },
+  {
+    id: 2,
+    date: "Coming soon",
+    title: "Keyboard Simulator",
+    description: "A web-app to design and test the display of virtual custom keyboards. The real objective behind is to learn about R3F library and 3D objects.",
+    skills: ["react", "typescript", "r3f"],
   },
 ];

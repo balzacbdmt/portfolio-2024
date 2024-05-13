@@ -1,14 +1,20 @@
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { Experience } from "../../../../constants/types";
+import { Skill } from "../../../../constants/types";
 import Pill from "../../../shared/pill/Pill";
 import styles from "./Row.module.scss";
 import { useState } from "react";
 
 interface Props {
-  experience: Experience;
+  title: string;
+  company?: string;
+  tasks?: string[];
+  description?: string;
+  date?: string;
+  skills?: Skill[];
+  url?: string;
 }
 
-const Row = ({ experience }: Props) => {
+const Row = ({ title, company, tasks, description, date, skills, url }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const onMouseEnter = () => {
@@ -19,31 +25,32 @@ const Row = ({ experience }: Props) => {
     setIsHovered(false);
   };
   
-  const skills = experience.skills.map((skill) => (
+  const skillsRender = skills?.length && skills.map((skill) => (
     <Pill key={skill} text={skill} />
   ));
 
-  const tasks = experience.tasks.map((task) => <li key={task}>{task}</li>);
+  const tasksRender = tasks?.length && tasks.map((task) => <li key={task}>{task}</li>);
 
   return (
     <a
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       className={styles.row}
-      href={experience.url}
+      href={url}
       target="_blank"
       rel="noreferrer"
     >
-      <p className={styles.date}>{experience.date}</p>
+      <p className={styles.date}>{date}</p>
       <div>
         <div className={styles.title}>
           <h3>
-            {experience.title} • {experience.company}
+            {title}{company && ` • ${company}`}
           </h3>
           <Icon icon="akar-icons:link-out" className={isHovered ? styles.yellow : styles.white} />
         </div>
-        <ul>{tasks}</ul>
-        <div className={styles.pillContainer}>{skills}</div>
+        <ul>{tasksRender}</ul>
+        <p>{description}</p>
+        <div className={styles.pillContainer}>{skillsRender}</div>
       </div>
     </a>
   );

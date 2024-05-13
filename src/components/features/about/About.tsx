@@ -1,11 +1,30 @@
 import styles from "./About.module.scss";
 import Row from "./row/Row";
 import { Icon } from "@iconify/react";
-import { experiences } from "../../../constants/data";
+import { experiences, projects } from "../../../constants/data";
 
 const About = () => {
-  const rowRender = experiences.map((experience) => (
-    <Row key={experience.company} experience={experience} />
+  const experiencesRender = experiences.map((experience) => (
+    <Row
+      key={`project_${String(experience.id)}`}
+      title={experience.title}
+      company={experience.company}
+      tasks={experience.tasks}
+      date={experience.date}
+      skills={experience.skills}
+      url={experience.url}
+    />
+  ));
+
+  const projectsRender = projects.map((project) => (
+    <Row
+      key={`project_${String(project.id)}`}
+      title={project.title}
+      description={project.description}
+      date={project.date}
+      skills={project.skills}
+      url={project.url}
+    />
   ));
 
   return (
@@ -52,7 +71,9 @@ const About = () => {
       </div>
       <div className={styles.content}>
         <h2>Relevant experiences</h2>
-        {rowRender}
+        {experiencesRender}
+        <h2>Personnal projects</h2>
+        {projectsRender}
       </div>
       <h1 className={styles.mobileTitle}>
         About&nbsp;<span className={styles.yellow}>me</span>

@@ -5,7 +5,9 @@ export type Skill =
   | "vue"
   | "nuxt"
   | "node"
-  | "d3";
+  | "d3"
+  | "npm"
+  | "r3f";
 
 export type Experience = {
   id: number;
@@ -15,4 +17,13 @@ export type Experience = {
   tasks: string[];
   skills: Skill[];
   url: string;
+};
+
+export type Project = {
+  id: number;
+  date: string;
+  title: string;
+  description: string;
+  skills: Skill[];
+  url?: string;
 };
