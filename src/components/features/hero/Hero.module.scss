@@ -35,12 +35,9 @@
     width: 400px;
     @include appear-from-bottom;
 
-    @include respond-to("medium") {
-      width: 200px;
-    }
-
     @include respond-to("small") {
-      width: 80%;
+      width: unset;
+      height: 40%;
     }
   }
 
@@ -54,8 +51,8 @@
     align-items: center;
     @include delayed-appear;
 
-    @include respond-to('small') {
-     text-align: center;
+    @include respond-to("small") {
+      text-align: center;
     }
 
     p {
