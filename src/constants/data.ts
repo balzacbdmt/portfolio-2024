@@ -55,9 +55,10 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    date: "Coming soon",
-    title: "Keyboard Simulator",
+    date: "May 24",
+    title: "My Pretty Keyboard",
     description: "A web-app to design and test the display of virtual custom keyboards. The real objective behind is to learn about R3F library and 3D objects.",
     skills: ["react", "typescript", "r3f"],
+    url: "https://my-pretty-keyboard-2pdo820gh-balzacs-projects.vercel.app/",
   },
 ];
